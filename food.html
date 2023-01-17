@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Webiste By MasroorChef.com</title>
+    <link rel="stylesheet" media="screen and (max-width: 1100px)" href="css/phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    
+    <style>
+        /* NAVBAR */
+
+      #navbar {
+        font-family: "Kanit", sans-serif;
+        position: sticky;
+        top: 0px;
+        /* border: 2px solid red; */
+      }
+      #navbar ul {
+        display: flex;
+        margin: 8px;
+        text-align: center;
+        justify-content: left;
+      }
+
+      #navbar::before {
+        content: " ";
+        background-color: black;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.4;
+        left: 0px;
+        top: 0px; 
+      }
+
+      #navbar ul li {
+        display: flex;
+        list-style: none;
+        margin: 8px;
+        text-align: right;
+        justify-content: right;
+      }
+      #navbar ul li a {
+        display: block;
+        color: white;
+        padding: 2px;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      #navbar ul li a:hover {
+        color: rgb(219, 20, 20);
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
+      }
+
+      /* HOME */
+
+      #home {
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        height: 600px;
+        align-items: center;
+        justify-content: center;
+        font-family: "Kanit", sans-serif;
+      }
+      #home::before {
+        content: " ";
+        background: url("pexels-robin-stickel-70497\ \(1\).jpg");
+        background-position: center; /* add this */
+        background-size: cover;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.79;
+      }
+      
+      #home h1 {
+        color: rgb(219, 20, 20);
+        text-align: center;
+      }
+      #home p {
+        color: white;
+        text-align: center;
+        font-size: 1.55rem;
+      }
+      .btn {
+        padding: 6px 20px;
+        border: 2px solid white;
+        background-color: rgb(219, 20, 20);
+        font-family: "Kanit", sans-serif;
+        border-radius: 6px;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      /* utility  */
+      .h-primary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px; 
+        color:rgb(219, 20, 20);
+        font-size: 2.8rem;
+        background-color: white;
+        font-family: "Kanit", sans-serif;
+        margin: 2px auto;
+      }
+
+      .h-secondary{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        padding: 20px;
+      }
+
+      /* Services */
+      .services-container{
+        /* background-color: rgb(187, 143, 143); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Kanit", sans-serif;   
+      
+      }
+    
+    
+      #services{
+        display: flex;
+        justify-content: center;
+            align-items: center;
+            border: 4px solid rgb(128, 13, 13);
+            background-color: rgb(187, 143, 143);
+            border-radius: 16px;
+        margin:7px 2px;   
+        display: block;
+        padding: 1px 20px;
+        /* border: 2px solid red; */
+        font-family: "Kanit", sans-serif;
+        
+        }
+      #services.box{
+        /* border: 2px solid red; */
+        margin: auto;
+            display: block;
+        font-family: "Kanit", sans-serif;
+        
+        }
+
+        #services .box img{
+            
+            height:100px;
+            font-family: "Kanit", sans-serif; 
+            margin: auto;
+            display: block;
+        }
+
+        .HS{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            font-family: "Kanit", sans-serif;  
+            padding: 20px 2px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+            background-color: rgb(255, 255, 254);
+            box-sizing: border-box;
+            color:rgb(219, 20, 20);
+            }
+
+      /* clients */
+      #clients{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* border: 2px solid red;  */
+        margin: 2px;
+        padding: 2px 20px;
+        font-size: 3.8rem;
+      }
+
+      #client-section::before{
+        content: " ";
+        background: url(sean-pollock-PhYq704ffdA-unsplash.jpg) ;
+        background-size: cover; /* this will make the image cover the full background */
+        background-position: center;
+         position: absolute;
+         top: 0;
+        left: 0;
+        width: 100%;
+         height: 100%;
+        z-index: -1; 
+        opacity: 0.79;
+ 
+    
+      }
+       #client-section{
+        position:relative;
+        
+       }
+     
+      /* Contact section */
+      .HSS{display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            font-family: "Kanit", sans-serif;  
+            padding: 20px 2px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+
+            background-color: rgb(255, 255, 254);
+            box-sizing: border-box;
+            color:rgb(219, 20, 20);
+
+      }
+      #contact{
+        position: relative;
+      }
+      #contact::before{
+        content: " ";
+        background: url(pexels-jonathan-borba-2983101.jpg) ;
+        background-size: cover; /* this will make the image cover the full background */
+        background-position: center;
+         position: absolute;
+         top: 0;
+        left: 0;
+        width: 100%;
+         height: 100%;
+        z-index: -1; 
+        opacity: 0.79;
+        
+      } 
+      #contact-box{
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        font-family: "Kanit", sans-serif;
+      }
+      #contact-box form{
+        width:40% ;
+      }
+      #contact-box label{
+        width:1.3rem ;
+      }
+      #contact-box input,#contact-box textarea{
+        width: 100%;
+        padding: 0.5rem;
+         font-size: 1.3rem;
+     padding: 9px;}
+  
+
+
+    footer{
+      background-color:rgb(0, 0, 0); color: white;
+       display: flex;
+      align-items: center;justify-content: center;}
+
+    </style>
+  </head>
+  <body>
+
+
+
+    <nav id="navbar">
+      <ul>
+        <li class="item"><a href="#home">Home</a></li>
+        <li class="item"><a href="#Services">Services</a></li>
+        <li class="item"><a href="#clinets">Our clients</a></li>
+        <li class="item"><a href="#">Contact us</a></li>
+      </ul>
+    </nav>
+
+
+
+    <section id="home">
+      <h1 class="h-primary">Welcome to Masroor chef</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis facere distinctio iure porro consectetur perferendis similique laudantium modi esse, alias suscipit et voluptatum autem ut pariatur at, incidunt qui numquam neque! Iusto commodi praesentium amet velit iure molestiae consequuntur quidem. Voluptatibus facilis architecto doloribus nostrum!
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <button class="btn">Order Now</button>
+    </section>
+
+    <h1 class="HS">Our Services</h1>    
+
+    <section class="services-container">
+    
+      <div id="services">
+        
+        <div class="box"><img src="pngwing.com (1).png" alt="ds" width="150"/></div>
+        <h2 class="h-secondary center">Food Odering</h2>
+        <p class="center"> 
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius laborum
+          pariatur, in unde veritatis maxime deleniti hic voluptas? Accusantium
+          repellendus commodi culpa voluptas illo repellat laboriosam
+          distinctio, ipsum in mollitia.
+        </p>
+        
+      </div>    
+      </div>
+      <div id="services">
+        <div class="box"><img src="pngwing.com.png" alt="ds" width="150"/></div>
+        <h2 class="h-secondary center">30 min delivery</h2>
+        <p class="center"> 
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius laborum
+          pariatur, in unde veritatis maxime deleniti hic voluptas? Accusantium
+          repellendus commodi culpa voluptas illo repellat laboriosam
+          distinctio, ipsum in mollitia.
+        </p>
+        
+      </div>
+      <div id="services">
+        <div class="box"><img src="213wing.com.png" alt="ds" width="150" height="450"/></div>
+        <h2 class="h-secondary center">Free delivery</h2>
+        <p class="center"> 
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius laborum
+          pariatur, in unde veritatis maxime deleniti hic voluptas? Accusantium
+          repellendus commodi culpa voluptas illo repellat laboriosam
+          distinctio, ipsum in mollitia.
+        </p>
+       </section>
+
+    <section id="client-section">
+        <h1 class="h-primary">Our Clients</h1>
+        <div id="clients">
+            <div id="client-item">
+                <img src="—Pngtree—collection logo design_3588264.png" alt="our client" width="450">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="HSS">Contact Us</h1>
+      <div id="contact-box">
+        <form action="">
+          <div class="form-group"><label for="name">Name</label><input type="text" name="name" id="name" 
+            placeholder="Enter your name"></div>
+
+            <div class="form-group"><label for="email">Email</label><input type="text" name="name" id="name" 
+              placeholder="Enter your Email"></div>
+
+              <div class="form-group"><label for="phone number">Phone Number</label><input type="text" name="name" id="name" 
+                placeholder="Enter your Phone Number"></div>
+
+                <div class="form-group"><label for="message">message</label>
+                  <textarea name="Message" id="message" cols="30" rows="10"></textarea>
+                  <button class="btn">submit</button>
+        </form>
+      </div> 
+    </section> 
+    <footer>
+      <div class="center">
+      Copyright &copy; masroorchef.com . All rights reserved
+    </div></footer>
+  </body>
+</html>
